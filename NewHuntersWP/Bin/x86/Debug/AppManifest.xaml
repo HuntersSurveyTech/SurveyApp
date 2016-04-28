@@ -1,0 +1,24 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="HuntersWP" EntryPointType="HuntersWP.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="HuntersWP" Source="HuntersWP.dll" />
+    <AssemblyPart x:Name="AutoMapper" Source="AutoMapper.dll" />
+    <AssemblyPart x:Name="AutoMapper.WP8" Source="AutoMapper.WP8.dll" />
+    <AssemblyPart x:Name="BugSense-WP8" Source="BugSense-WP8.dll" />
+    <AssemblyPart x:Name="Coding4Fun.Toolkit.Controls" Source="Coding4Fun.Toolkit.Controls.dll" />
+    <AssemblyPart x:Name="Hammock.WindowsPhone" Source="Hammock.WindowsPhone.dll" />
+    <AssemblyPart x:Name="Microsoft.ApplicationInsights" Source="Microsoft.ApplicationInsights.dll" />
+    <AssemblyPart x:Name="Microsoft.ApplicationInsights.Extensibility.Windows" Source="Microsoft.ApplicationInsights.Extensibility.Windows.dll" />
+    <AssemblyPart x:Name="Microsoft.Data.Edm.Portable" Source="Microsoft.Data.Edm.Portable.dll" />
+    <AssemblyPart x:Name="Microsoft.Data.OData.Portable" Source="Microsoft.Data.OData.Portable.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="Microsoft.Threading.Tasks" Source="Microsoft.Threading.Tasks.dll" />
+    <AssemblyPart x:Name="Microsoft.Threading.Tasks.Extensions" Source="Microsoft.Threading.Tasks.Extensions.dll" />
+    <AssemblyPart x:Name="Microsoft.Threading.Tasks.Extensions.Phone" Source="Microsoft.Threading.Tasks.Extensions.Phone.dll" />
+    <AssemblyPart x:Name="Microsoft.WindowsAzure.Storage" Source="Microsoft.WindowsAzure.Storage.dll" />
+    <AssemblyPart x:Name="Newtonsoft.Json" Source="Newtonsoft.Json.dll" />
+    <AssemblyPart x:Name="System.Spatial.Portable" Source="System.Spatial.Portable.dll" />
+    <AssemblyPart x:Name="Sqlite" Source="Sqlite.dll" />
+    <AssemblyPart Source="en-GB/HuntersWP.resources.dll" />
+    <AssemblyPart Source="en-GB/Microsoft.Phone.Controls.Toolkit.resources.dll" />
+  </Deployment.Parts>
+</Deployment>

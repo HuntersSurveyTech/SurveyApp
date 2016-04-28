@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1194/HuntersService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="BaseAuthRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserAuthId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BaseAuthRequest" nillable="true" type="tns:BaseAuthRequest" />
+  <xs:complexType name="BaseRequest">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="BaseRequest" nillable="true" type="tns:BaseRequest" />
+  <xs:complexType name="BaseListReply">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseReply">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TotalCount" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BaseListReply" nillable="true" type="tns:BaseListReply" />
+  <xs:complexType name="BaseReply">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NotFoundUser" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseReply" nillable="true" type="tns:BaseReply" />
+  <xs:complexType name="BaseAuthListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseAuthRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ItemsPerPage" type="xs:int" />
+          <xs:element minOccurs="0" name="Offset" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BaseAuthListRequest" nillable="true" type="tns:BaseAuthListRequest" />
+</xs:schema>

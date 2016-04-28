@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>BugSense.WP8</id>
+    <version>3.5.0.2</version>
+    <title>BugSense plugin for Windows Phone 8</title>
+    <authors>BugSense</authors>
+    <owners>BugSense</owners>
+    <licenseUrl>https://www.bugsense.com/sdklicense</licenseUrl>
+    <projectUrl>http://www.bugsense.com/docs/windowsphone</projectUrl>
+    <iconUrl>http://www.panicnot.com/image/bugsense-min-in.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>BugSense is the leading crash reporting and quality metrics service for mobile apps. This is the plugin for Windows Phone 8.</description>
+    <releaseNotes>New features: Last Action, Metadata bug fixes, minor fixes</releaseNotes>
+    <copyright>Copyright 2012-13</copyright>
+    <language />
+    <tags>wp8 bugsense crash reports windows phone quality metrics errors c#</tags>
+  </metadata>
+</package>

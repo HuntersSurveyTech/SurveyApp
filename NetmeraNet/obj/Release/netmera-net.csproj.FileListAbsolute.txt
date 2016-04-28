@@ -1,0 +1,6 @@
+C:\Development\Storage\Hunters\HuntersWP\NetmeraNet\bin\Release\netmera-net-1.4.2.dll
+C:\Development\Storage\Hunters\HuntersWP\NetmeraNet\bin\Release\netmera-net-1.4.2.pdb
+C:\Development\Storage\Hunters\HuntersWP\NetmeraNet\bin\Release\Newtonsoft.Json.dll
+C:\Development\Storage\Hunters\HuntersWP\NetmeraNet\obj\Release\netmera-net-1.4.2.dll
+C:\Development\Storage\Hunters\HuntersWP\NetmeraNet\obj\Release\netmera-net-1.4.2.pdb
+c:\Development\Storage\Hunters\HuntersWP\NetmeraNet\obj\Release\netmera-net.csprojResolveAssemblyReference.cache

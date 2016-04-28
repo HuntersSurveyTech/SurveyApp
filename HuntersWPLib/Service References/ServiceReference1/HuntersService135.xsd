@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/HuntersService.Contracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HuntersService.Contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1194/HuntersService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/HuntersService.Entities" />
+  <xs:import schemaLocation="http://localhost:1194/HuntersService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" />
+  <xs:import schemaLocation="http://localhost:1194/HuntersService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:1194/HuntersService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="SaveAddressRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q1:BaseAuthRequest">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/HuntersService.Entities" minOccurs="0" name="Items" nillable="true" type="q2:ArrayOfAddress" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveAddressRequest" nillable="true" type="tns:SaveAddressRequest" />
+  <xs:complexType name="GetQuestionsReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q3:BaseListReply">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/HuntersService.Entities" minOccurs="0" name="Items" nillable="true" type="q4:ArrayOfQuestion" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetQuestionsReply" nillable="true" type="tns:GetQuestionsReply" />
+  <xs:complexType name="SaveSurvelemRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q5:BaseAuthRequest">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/HuntersService.Entities" minOccurs="0" name="Items" nillable="true" type="q6:ArrayOfSurvelem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveSurvelemRequest" nillable="true" type="tns:SaveSurvelemRequest" />
+  <xs:complexType name="SaveRichMediaRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q7:BaseAuthRequest">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/HuntersService.Entities" minOccurs="0" name="Items" nillable="true" type="q8:ArrayOfRichMedia" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveRichMediaRequest" nillable="true" type="tns:SaveRichMediaRequest" />
+  <xs:complexType name="LoginRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q9:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LoginRequest" nillable="true" type="tns:LoginRequest" />
+  <xs:complexType name="LoginReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q10:BaseReply">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LoginReply" nillable="true" type="tns:LoginReply" />
+  <xs:complexType name="GetCustomersRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q11:BaseAuthRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetCustomersRequest" nillable="true" type="tns:GetCustomersRequest" />
+  <xs:complexType name="GetCustomersReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q12:BaseReply">
+        <xs:sequence>
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/HuntersService.Entities" minOccurs="0" name="Items" nillable="true" type="q13:ArrayOfCustomer" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetCustomersReply" nillable="true" type="tns:GetCustomersReply" />
+  <xs:complexType name="GetAddressesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q14:BaseAuthListRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAddressesRequest" nillable="true" type="tns:GetAddressesRequest" />
+  <xs:complexType name="GetAddressesReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q15:BaseListReply">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/HuntersService.Entities" minOccurs="0" name="Items" nillable="true" type="q16:ArrayOfAddress" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAddressesReply" nillable="true" type="tns:GetAddressesReply" />
+  <xs:complexType name="GetOptionsReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q17:BaseListReply">
+        <xs:sequence>
+          <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/HuntersService.Entities" minOccurs="0" name="Items" nillable="true" type="q18:ArrayOfOption" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetOptionsReply" nillable="true" type="tns:GetOptionsReply" />
+  <xs:complexType name="GetOptionsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q19:BaseAuthListRequest">
+        <xs:sequence>
+          <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Ids" nillable="true" type="q20:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetOptionsRequest" nillable="true" type="tns:GetOptionsRequest" />
+  <xs:complexType name="GetQuestionsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q21:BaseAuthListRequest">
+        <xs:sequence>
+          <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Ids" nillable="true" type="q22:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetQuestionsRequest" nillable="true" type="tns:GetQuestionsRequest" />
+  <xs:complexType name="GetSurveyTypesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q23:BaseAuthRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSurveyTypesRequest" nillable="true" type="tns:GetSurveyTypesRequest" />
+  <xs:complexType name="GetSurveyTypesReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q24:BaseReply">
+        <xs:sequence>
+          <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/HuntersService.Entities" minOccurs="0" name="Items" nillable="true" type="q25:ArrayOfSurveyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSurveyTypesReply" nillable="true" type="tns:GetSurveyTypesReply" />
+  <xs:complexType name="GetRichMediasReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q26:BaseListReply">
+        <xs:sequence>
+          <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/HuntersService.Entities" minOccurs="0" name="Items" nillable="true" type="q27:ArrayOfRichMedia" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRichMediasReply" nillable="true" type="tns:GetRichMediasReply" />
+  <xs:complexType name="GetRichMediasRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q28:BaseAuthListRequest">
+        <xs:sequence>
+          <xs:element xmlns:q29="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Ids" nillable="true" type="q29:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRichMediasRequest" nillable="true" type="tns:GetRichMediasRequest" />
+  <xs:complexType name="GetSurvelemMapsReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q30:BaseListReply">
+        <xs:sequence>
+          <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/HuntersService.Entities" minOccurs="0" name="Items" nillable="true" type="q31:ArrayOfSurvelemMap" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSurvelemMapsReply" nillable="true" type="tns:GetSurvelemMapsReply" />
+  <xs:complexType name="GetSurvelemMapsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q32:BaseAuthListRequest">
+        <xs:sequence>
+          <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Ids" nillable="true" type="q33:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSurvelemMapsRequest" nillable="true" type="tns:GetSurvelemMapsRequest" />
+  <xs:complexType name="GetSurvelemsReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q34:BaseListReply">
+        <xs:sequence>
+          <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/HuntersService.Entities" minOccurs="0" name="Items" nillable="true" type="q35:ArrayOfSurvelem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSurvelemsReply" nillable="true" type="tns:GetSurvelemsReply" />
+  <xs:complexType name="GetSurvelemsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q36:BaseAuthListRequest">
+        <xs:sequence>
+          <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Ids" nillable="true" type="q37:ArrayOfstring" />
+          <xs:element xmlns:q38="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UPRNs" nillable="true" type="q38:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSurvelemsRequest" nillable="true" type="tns:GetSurvelemsRequest" />
+  <xs:complexType name="CheckItemsReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q39="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q39:BaseReply">
+        <xs:sequence>
+          <xs:element xmlns:q40="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Ids" nillable="true" type="q40:ArrayOfguid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CheckItemsReply" nillable="true" type="tns:CheckItemsReply" />
+  <xs:complexType name="CheckItemsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://schemas.datacontract.org/2004/07/HuntersService.Contracts.Base" base="q41:BaseAuthRequest">
+        <xs:sequence>
+          <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Ids" nillable="true" type="q42:ArrayOfguid" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CheckItemsRequest" nillable="true" type="tns:CheckItemsRequest" />
+</xs:schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="43b297bb-f7d9-4de3-a4ee-ea67a5ab6eae" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57295/HuntersService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HuntersService.wsdl" MetadataType="Wsdl" ID="a28d6fb0-8e22-49f3-bd7f-4470c4fde695" SourceId="1" SourceUrl="http://localhost:57295/HuntersService.svc?wsdl" />
+    <MetadataFile FileName="HuntersService.xsd" MetadataType="Schema" ID="07f8e190-912b-4831-bdfb-78a3d1ee1506" SourceId="1" SourceUrl="http://localhost:57295/HuntersService.svc?xsd=xsd5" />
+    <MetadataFile FileName="HuntersService1.xsd" MetadataType="Schema" ID="e3cd6248-0429-456a-bf49-3ec16a8ed9d4" SourceId="1" SourceUrl="http://localhost:57295/HuntersService.svc?xsd=xsd4" />
+    <MetadataFile FileName="HuntersService2.xsd" MetadataType="Schema" ID="b0a5f585-36e1-4099-b715-d0ccb59a3b12" SourceId="1" SourceUrl="http://localhost:57295/HuntersService.svc?xsd=xsd1" />
+    <MetadataFile FileName="HuntersService3.xsd" MetadataType="Schema" ID="0d385bad-8003-4dc8-ac78-cc3bb330a54e" SourceId="1" SourceUrl="http://localhost:57295/HuntersService.svc?xsd=xsd0" />
+    <MetadataFile FileName="HuntersService.disco" MetadataType="Disco" ID="a6d0d976-4381-42b6-96cd-6f317cc83ecb" SourceId="1" SourceUrl="http://localhost:57295/HuntersService.svc?disco" />
+    <MetadataFile FileName="HuntersService4.xsd" MetadataType="Schema" ID="5bd1a355-3b92-404f-a907-5d0f2ac7c2fb" SourceId="1" SourceUrl="http://localhost:57295/HuntersService.svc?xsd=xsd2" />
+    <MetadataFile FileName="HuntersService5.xsd" MetadataType="Schema" ID="9a33261e-322c-4b07-8ad7-c345c2e5e553" SourceId="1" SourceUrl="http://localhost:57295/HuntersService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

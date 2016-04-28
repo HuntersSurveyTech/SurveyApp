@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/HuntersService.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HuntersService.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1194/HuntersService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="tns:Address" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddress" nillable="true" type="tns:ArrayOfAddress" />
+  <xs:complexType name="Address">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressLine1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressLine2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressLine3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressLine4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AllowCopyFrom" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Bedrooms" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BlockUPRN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BuildingName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Complete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CopiedFrom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CopyTo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustomerID" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerSurveyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DateSurveyed" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FlatNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Floor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FullAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HasStartedToSurveyed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LeaseHolderAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Multipliers" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PTUpdated" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Postcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuestionGrp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SAPBand" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SAPRating" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Submit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Submitted" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Surveyor" type="ser:guid" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UPRN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Visited" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="Entity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="LogItemId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SyncStatus" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Entity" nillable="true" type="tns:Entity" />
+  <xs:complexType name="ArrayOfQuestion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Question" nillable="true" type="tns:Question" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQuestion" nillable="true" type="tns:ArrayOfQuestion" />
+  <xs:complexType name="Question">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnswerRangeFrom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AnswerRangeTextF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AnswerRangeTextT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AnswerRangeTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Apply_2nd_Question" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerID" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerSurveyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DecenWtHomes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Display" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExcludeFromClone" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LeaseholderQuestion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LookAtRange" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Main_Element" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuestionGroup" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Question_Heading" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Question_Order" type="xs:int" />
+          <xs:element minOccurs="0" name="Question_Ref" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Question_Type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurveyType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="finishSection" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Question" nillable="true" type="tns:Question" />
+  <xs:complexType name="ArrayOfSurvelem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Survelem" nillable="true" type="tns:Survelem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSurvelem" nillable="true" type="tns:ArrayOfSurvelem" />
+  <xs:complexType name="Survelem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BuildingType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COMMENT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerID" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerSurveyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DateOfSurvey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Freetext" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OptionID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OptionID2ndry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Question_Ref" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpotPriceFF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqN9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqT9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UPRN" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Survelem" nillable="true" type="tns:Survelem" />
+  <xs:complexType name="ArrayOfRichMedia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RichMedia" nillable="true" type="tns:RichMedia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRichMedia" nillable="true" type="tns:ArrayOfRichMedia" />
+  <xs:complexType name="RichMedia">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerID" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerSurveyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Option_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Question_Ref" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UPRN" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RichMedia" nillable="true" type="tns:RichMedia" />
+  <xs:complexType name="ArrayOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Customer" nillable="true" type="tns:Customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomer" nillable="true" type="tns:ArrayOfCustomer" />
+  <xs:complexType name="Customer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Completed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustomerID" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerShortName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerSurveyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurveyImportDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Surveyors" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:complexType name="ArrayOfOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Option" nillable="true" type="tns:Option" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOption" nillable="true" type="tns:ArrayOfOption" />
+  <xs:complexType name="Option">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Choose" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ConfirmationRequired" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustomerID" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerSurveyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Disable2nd" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DisplayText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Jumpto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Level" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LifeGuide" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Option_Number" type="xs:int" />
+          <xs:element minOccurs="0" name="Question_Ref" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Option" nillable="true" type="tns:Option" />
+  <xs:complexType name="ArrayOfSurveyType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SurveyType" nillable="true" type="tns:SurveyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSurveyType" nillable="true" type="tns:ArrayOfSurveyType" />
+  <xs:complexType name="SurveyType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SurveyType" nillable="true" type="tns:SurveyType" />
+  <xs:complexType name="ArrayOfSurvelemMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SurvelemMap" nillable="true" type="tns:SurvelemMap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSurvelemMap" nillable="true" type="tns:ArrayOfSurvelemMap" />
+  <xs:complexType name="SurvelemMap">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerID" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerSurveyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Formats" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Question_Heading" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Question_Ref" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SqName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurveyType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SurvelemMap" nillable="true" type="tns:SurvelemMap" />
+</xs:schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f9d69132-48a6-4b2e-8da2-27855bf18c62" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://huntersdatamigrate.azurewebsites.net/HuntersService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HuntersService.xsd" MetadataType="Schema" ID="1219e906-ac95-40db-963b-10c8df0e9cf7" SourceId="1" SourceUrl="http://huntersdatamigrate.azurewebsites.net/HuntersService.svc?xsd=xsd1" />
+    <MetadataFile FileName="HuntersService1.xsd" MetadataType="Schema" ID="451aba4e-e86d-4333-b428-6422fc1bf4c4" SourceId="1" SourceUrl="http://huntersdatamigrate.azurewebsites.net/HuntersService.svc?xsd=xsd3" />
+    <MetadataFile FileName="HuntersService2.xsd" MetadataType="Schema" ID="13010f3d-b05c-43ce-b703-1236c5558248" SourceId="1" SourceUrl="http://huntersdatamigrate.azurewebsites.net/HuntersService.svc?xsd=xsd4" />
+    <MetadataFile FileName="HuntersService3.xsd" MetadataType="Schema" ID="7f6c0d71-bd25-47e0-93b6-7d710d303004" SourceId="1" SourceUrl="http://huntersdatamigrate.azurewebsites.net/HuntersService.svc?xsd=xsd5" />
+    <MetadataFile FileName="HuntersService4.xsd" MetadataType="Schema" ID="a8be5f22-6c0e-4c8a-ad0f-984e83da30f1" SourceId="1" SourceUrl="http://huntersdatamigrate.azurewebsites.net/HuntersService.svc?xsd=xsd2" />
+    <MetadataFile FileName="HuntersService.disco" MetadataType="Disco" ID="0135d32d-c00a-4912-b6a8-635ae50770e1" SourceId="1" SourceUrl="http://huntersdatamigrate.azurewebsites.net/HuntersService.svc?disco" />
+    <MetadataFile FileName="HuntersService5.xsd" MetadataType="Schema" ID="ac2b31f3-a28a-4b94-81ba-52ecd6e3519a" SourceId="1" SourceUrl="http://huntersdatamigrate.azurewebsites.net/HuntersService.svc?xsd=xsd0" />
+    <MetadataFile FileName="HuntersService.wsdl" MetadataType="Wsdl" ID="447f8383-c601-4192-880c-884997ec70ec" SourceId="1" SourceUrl="http://huntersdatamigrate.azurewebsites.net/HuntersService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

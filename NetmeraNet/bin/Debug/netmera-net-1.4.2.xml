@@ -1,0 +1,1375 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>netmera-net-1.4.2</name>
+    </assembly>
+    <members>
+        <member name="T:Netmera.BaseContent">
+            <summary>
+            An abstract class that contains basic functions for <see cref="T:Netmera.NetmeraContent"/>
+            </summary>
+        </member>
+        <member name="F:Netmera.BaseContent.data">
+            <summary>
+            Object to hold data
+            </summary>
+        </member>
+        <member name="F:Netmera.BaseContent.mediaData">
+            <summary>
+            Object to hold media data
+            </summary>
+        </member>
+        <member name="M:Netmera.BaseContent.add(System.String,System.Object)">
+            <summary>
+            Adds key,value pairs into the object. If the object contains key, the old value is replaced.
+            </summary>
+            <param name="key">Key to identify specified value</param>
+            <param name="value">Value associates with the specified key</param>
+            <exception cref="T:Netmera.NetmeraException">Throws exception if key is null, if value is null</exception>
+        </member>
+        <member name="M:Netmera.BaseContent.get(System.String)">
+            <summary>
+            Gets the object with the specified key.
+            </summary>
+            <param name="key">Key to get value</param>
+            <returns>The object with the specified key. If the key does not exists then it returns null.</returns>
+            <exception cref="T:Netmera.NetmeraException">Throws exception if it cannot get object</exception>
+        </member>
+        <member name="M:Netmera.BaseContent.getString(System.String)">
+            <summary>
+            Gets the String object with the specified key.
+            </summary>
+            <param name="key">Key to get value</param>
+            <returns>Returns The string with the specified key.If the object type is not string or key does not exists then it returns null.</returns>
+        </member>
+        <member name="M:Netmera.BaseContent.getInt16(System.String)">
+            <summary>
+            Gets the int value with the specified key.
+            </summary>
+            <param name="key">Key to get value</param>
+            <returns>The int value with the specified key.If value is not an integer or key does not exists then it returns 0.</returns>
+        </member>
+        <member name="M:Netmera.BaseContent.getInt32(System.String)">
+            <summary>
+            Gets the int value with the specified key.
+            </summary>
+            <param name="key">Key to get value</param>
+            <returns>The int value with the specified key.If value is not an integer or key does not exists then it returns 0.</returns>
+        </member>
+        <member name="M:Netmera.BaseContent.getInt64(System.String)">
+            <summary>
+            Gets the int value with the specified key.
+            </summary>
+            <param name="key">Key to get value</param>
+            <returns>The int value with the specified key.If value is not an integer or key does not exists then it returns 0.</returns>
+        </member>
+        <member name="M:Netmera.BaseContent.getLong(System.String)">
+            <summary>
+            Gets the long value with the specified key.
+            </summary>
+            <param name="key">Key to get value</param>
+            <returns>The long value with the specified key.If value is not a long or key does not exists then it returns 0.</returns>
+        </member>
+        <member name="M:Netmera.BaseContent.getBoolean(System.String)">
+            <summary>
+            Gets the boolean value with the specified key.
+            </summary>
+            <param name="key">Key to get value</param>
+            <returns>The boolean value with the specified key.If value is not a boolean or key does not exists then it returns false.</returns>
+        </member>
+        <member name="M:Netmera.BaseContent.getDouble(System.String)">
+            <summary>
+            Gets the double value with the specified key.
+            </summary>
+            <param name="key">Key to get value</param>
+            <returns>The double value with the specified key.If value is not a double or key does not exists then it returns 0.0.</returns>
+        </member>
+        <member name="M:Netmera.BaseContent.getJObject(System.String)">
+            <summary>
+            Gets the <see cref="T:Newtonsoft.Json.Linq.JObject"/> object with the specified key.
+            </summary>
+            <param name="key">Key to get value</param>
+            <returns><see cref="T:Newtonsoft.Json.Linq.JObject"/> object with the specified key.If the object type is not an <see cref="T:Newtonsoft.Json.Linq.JObject"/> or key does not exists then it returns null.</returns>
+        </member>
+        <member name="M:Netmera.BaseContent.getJArray(System.String)">
+            <summary>
+            Gets the <see cref="T:Newtonsoft.Json.Linq.JArray"/> object with the specified key.
+            </summary>
+            <param name="key">Key to get value</param>
+            <returns><see cref="T:Newtonsoft.Json.Linq.JArray"/> object with the specified key.If the object type is not an <see cref="T:Newtonsoft.Json.Linq.JArray"/> or key does not exists then it returns null.</returns>
+        </member>
+        <member name="M:Netmera.BaseContent.getNetmeraMedia(System.String)">
+            <summary>
+            Gets the <see cref="T:Netmera.NetmeraMedia"/> object with the specified key.
+            </summary>
+            <param name="key">Key to get value</param>
+            <returns><see cref="T:Netmera.NetmeraMedia"/> object with the specified key.If the object type is not an  <see cref="T:Netmera.NetmeraMedia"/> or key does not exists then it returns null.</returns>
+        </member>
+        <member name="M:Netmera.BaseContent.getNetmeraGeoLocation(System.String)">
+            <summary>
+            Gets the  <see cref="T:Netmera.NetmeraGeoLocation"/> object with the specified key.
+            </summary>
+            <param name="key">Key to get value</param>
+            <returns><see cref="T:Netmera.NetmeraGeoLocation"/> object with the specified key. If the object type is not an <see cref="T:Netmera.NetmeraGeoLocation"/> or key does not exists then it returns null.</returns>
+        </member>
+        <member name="T:Netmera.BasePush">
+            <summary>
+            An abstract class that contains basic functions for <see cref="T:Netmera.NetmeraPush"/>, <see cref="T:Netmera.NetmeraAndroidPush"/> and <see cref="T:Netmera.NetmeraIOSPush"/>,
+            </summary>
+        </member>
+        <member name="F:Netmera.BasePush.message">
+            <summary>
+            push message
+            </summary>
+        </member>
+        <member name="F:Netmera.BasePush.deviceGroups">
+            <summary>
+            device groups
+            </summary>
+        </member>
+        <member name="F:Netmera.BasePush.locationType">
+            <summary>
+            location type
+            </summary>
+        </member>
+        <member name="F:Netmera.BasePush.distance">
+            <summary>
+            distance
+            </summary>
+        </member>
+        <member name="F:Netmera.BasePush.firstLoc">
+            <summary>
+            first location
+            </summary>
+        </member>
+        <member name="F:Netmera.BasePush.secondLoc">
+            <summary>
+            second location
+            </summary>
+        </member>
+        <member name="M:Netmera.BasePush.sendNotification">
+            <summary>
+            An abstract method to be overriden sending notification to devices.
+            </summary>
+            <returns><see cref="T:Netmera.BasePush.PushChannel"/>-<see cref="T:Netmera.NetmeraPushDetail"/> pairs to show the details of sending notification to devices.</returns>
+        </member>
+        <member name="M:Netmera.BasePush.setMessage(System.String)">
+            <summary>
+            Sets the notification message
+            </summary>
+            <param name="message">The notification message</param>
+        </member>
+        <member name="M:Netmera.BasePush.getMessage">
+            <summary>
+            Gets the notification message
+            </summary>
+            <returns>The notification message</returns>
+        </member>
+        <member name="M:Netmera.BasePush.setDeviceGroups(System.Collections.Generic.List{System.String})">
+            <summary>
+            Sets the device groups
+            </summary>
+            <param name="deviceGroups">Device groups</param>
+        </member>
+        <member name="M:Netmera.BasePush.getDeviceGroups">
+            <summary>
+            Gets the device groups
+            </summary>
+            <returns>Device groups</returns>
+        </member>
+        <member name="M:Netmera.BasePush.setDeviceGroup(System.String)">
+            <summary>
+            Sets one device groups after clearing the previous
+            </summary>
+            <param name="deviceGroup">The device group</param>
+        </member>
+        <member name="M:Netmera.BasePush.setBoxPush(Netmera.NetmeraGeoLocation,Netmera.NetmeraGeoLocation)">
+            <summary>
+            Sets the search type of this push notification to box search.
+            </summary>
+            <param name="firstLoc">First point of the box</param>
+            <param name="secondLoc">Second point of the box</param>
+        </member>
+        <member name="M:Netmera.BasePush.setCirclePush(Netmera.NetmeraGeoLocation,System.Double)">
+            <summary>
+            Sets the search type of this push notification to circle search.
+            </summary>
+            <param name="centerLoc">center point of the circle.</param>
+            <param name="distance">distance radius of the circle in kilometers.</param>
+        </member>
+        <member name="M:Netmera.BasePush.sendPushMessage(System.Collections.Generic.List{System.String})">
+            <summary>
+            Send Push Message
+            </summary>
+            <param name="channelList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Netmera.BasePush.PushChannel">
+            <summary>
+            Push channel types
+            </summary>
+        </member>
+        <member name="F:Netmera.BasePush.PushChannel.android">
+            <summary>
+            Android
+            </summary>
+        </member>
+        <member name="F:Netmera.BasePush.PushChannel.ios">
+            <summary>
+            IOS
+            </summary>
+        </member>
+        <member name="F:Netmera.BasePush.PushChannel.wp">
+            <summary>
+            Windows Phone
+            </summary>
+        </member>
+        <member name="T:Netmera.NetmeraIOSPush">
+            <summary>
+            It is used to send push notifications to IOS devices.
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraIOSPush.sendNotification">
+            <summary>
+            Sends notification to IOS devices.
+            </summary>
+            <returns><see cref="T:Netmera.BasePush.PushChannel"/>-<see cref="T:Netmera.NetmeraPushDetail"/> pairs to show the details of sending notification to devices.</returns>
+        </member>
+        <member name="T:Netmera.NetmeraAndroidPush">
+            <summary>
+            It is used to send push notifications to Android devices.
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraAndroidPush.sendNotification">
+            <summary>
+            Sends notification to Android devices.
+            </summary>
+            <returns><see cref="T:Netmera.BasePush.PushChannel"/>-<see cref="T:Netmera.NetmeraPushDetail"/> pairs to show the details of sending notification to devices.</returns>
+        </member>
+        <member name="T:Netmera.HttpUtils">
+            <summary>
+            Provides some utilities to obtain byte arrays from some sorts of media data.
+            </summary>
+        </member>
+        <member name="M:Netmera.HttpUtils.toByteArray(System.Uri)">
+            <summary>
+            Converts media in a URL to byte array
+            </summary>
+            <param name="uri">Source media url</param>
+            <returns>Byte array obtained from the url</returns>
+        </member>
+        <member name="M:Netmera.HttpUtils.toByteArray(System.IO.StreamReader)">
+            <summary>
+            Converts media in a stream reader to byte array
+            </summary>
+            <param name="sr">Source media stream reader</param>
+            <returns>Byte array obtained from stream reader</returns>
+        </member>
+        <member name="M:Netmera.HttpUtils.toByteArray(System.IO.FileInfo)">
+            <summary>
+            Converts media in a local file to byte array
+            </summary>
+            <param name="file">Source media file</param>
+            <returns>Byte array obtained from a local media file</returns>
+        </member>
+        <member name="T:Netmera.NetmeraClient">
+            <copyright>Copyright 2012 Inomera Research</copyright>
+            <summary>
+            It contains the configuration methods.
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraClient.init(System.String)">
+            <summary>
+            Authenticates user and application. It is recommended to call this method at the beginning of the program.
+            </summary>
+            <param name="st">User and Application specific key</param>
+        </member>
+        <member name="M:Netmera.NetmeraClient.getSecurityToken">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Netmera.NetmeraClient.finish">
+            <summary>
+            sets root security token
+            </summary>
+        </member>
+        <member name="T:Netmera.NetmeraContent">
+            <summary>
+            It is used to run CRUD operations over the data.
+            After creating object use add() method to fill data and call create() method to add data into cloud.
+            </summary>
+            <copyright>Copyright 2012 Inomera Research</copyright>
+        </member>
+        <member name="F:Netmera.NetmeraContent.objectName">
+            <summary>
+            Name of the content
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraContent.path">
+            <summary>
+            Path to the content
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraContent.createDate">
+            <summary>
+            Create date of the NetmeraContent object
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraContent.updateDate">
+            <summary>
+            Update date of the NetmeraContent object
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraContent.privacy">
+            <summary>
+            Privacy of the content
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraContent.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraContent.#ctor(System.String)">
+            <summary>
+            Constructor that takes content name as parameter.
+            </summary>
+            <param name="objectName">Name of the content</param>
+        </member>
+        <member name="M:Netmera.NetmeraContent.getPrivacy">
+            <summary>
+            the privacy of the content
+            </summary>
+            <returns>privacy</returns>
+        </member>
+        <member name="M:Netmera.NetmeraContent.setPrivacy(System.String)">
+            <summary>
+            privacy string of the content
+            </summary>
+            <param name="privacy">privacy</param>
+        </member>
+        <member name="M:Netmera.NetmeraContent.setPrivacy(Netmera.NetmeraPrivacy)">
+            <summary>
+            allows user to set the privacy of the content
+            </summary>
+            <param name="privacy">privacy</param>
+        </member>
+        <member name="M:Netmera.NetmeraContent.create">
+            <summary>
+            Adds data to the cloud.
+            </summary>
+            <exception cref="T:Netmera.NetmeraException">Throws exception if invalid request, if cannot connect to the server, if error occurred while adding data.</exception>
+        </member>
+        <member name="M:Netmera.NetmeraContent.update">
+            <summary>
+            Updates data in the cloud.
+            </summary>
+            <exception cref="T:Netmera.NetmeraException">Throws exception if invalid request, if cannot connect to the server, if error occurred while adding data.</exception>
+        </member>
+        <member name="M:Netmera.NetmeraContent.delete">
+            <summary>
+            Deletes data from the cloud.
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraContent.getPath">
+            <summary>
+            Returns the path of the content.
+            </summary>
+            <returns>The path of the content</returns>
+            <exception cref="T:Netmera.NetmeraException">Throws exception if error occurred while getting data.</exception>
+        </member>
+        <member name="M:Netmera.NetmeraContent.setPath(System.String)">
+            <summary>
+            Sets the path of the content.This is used to find the content to delete and update.
+            </summary>
+            <param name="path">Path ofthe content</param>
+        </member>
+        <member name="M:Netmera.NetmeraContent.setOwner(Netmera.NetmeraUser)">
+            <summary>
+            Sets the owner to the content.
+            </summary>
+            <param name="user">Current logged user</param>
+        </member>
+        <member name="M:Netmera.NetmeraContent.getObjectName">
+            <summary>
+            Returns the name of the content.
+            </summary>
+            <returns>The name of the content</returns>
+        </member>
+        <member name="M:Netmera.NetmeraContent.getCreateDate">
+            <summary>
+            Gets the createDate of the content.
+            </summary>
+            <returns>Create date</returns>
+        </member>
+        <member name="M:Netmera.NetmeraContent.getUpdateDate">
+            <summary>
+            Gets the updateDate of the content.
+            </summary>
+            <returns>Update date</returns>
+        </member>
+        <member name="M:Netmera.NetmeraContent.setContent(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Sets the content parameters.
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraContent.clearContent">
+            <summary>
+            Clears the content parameters.
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraContent.getContent">
+            <summary>
+            Returns the  <see cref="T:Newtonsoft.Json.Linq.JObject"/> which contains detailed informations about content.
+            </summary>
+            <returns><see cref="T:Newtonsoft.Json.Linq.JObject"/></returns>
+        </member>
+        <member name="M:Netmera.NetmeraContent.getOwner">
+            <summary>
+            Returns the  <see cref="T:Newtonsoft.Json.Linq.JObject"/> which contains detailed informations about
+            </summary>
+            <returns><see cref="T:Newtonsoft.Json.Linq.JObject"/></returns>
+        </member>
+        <member name="M:Netmera.NetmeraContent.create(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Creates the specified data.
+            </summary>
+            <param name="data">The data</param>
+        </member>
+        <member name="M:Netmera.NetmeraContent.update(Newtonsoft.Json.Linq.JObject,System.String)">
+            <summary>
+            Updates the specified data.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="path">The path.</param>
+        </member>
+        <member name="T:Netmera.NetmeraException">
+            <copyright>Copyright 2012 Inomera Research</copyright>
+            <summary>
+            Exception handling mechanism for Netmera API. It throws an exception when there is a failure while creating,editing,deleting and searching data. Also it throws and exception when there is an network connection error.
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraException.#ctor(Netmera.NetmeraException.ErrorCode,System.Object[])">
+            <summary>
+            
+            </summary>
+            <param name="code">NetmeraException.ErrorCode</param>
+            <param name="exceptionParams">throw exception message params</param>
+        </member>
+        <member name="M:Netmera.NetmeraException.getCode">
+            <summary>
+            Returns the error code
+            </summary>
+            <returns>The error code</returns>
+        </member>
+        <member name="T:Netmera.NetmeraException.ErrorCode">
+            <summary>
+            Error codes container for Netmera
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INTERNAL_SERVER_ERROR">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_IO_EXCEPTION">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_NULL_EXCEPTION">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_HTTP_PROTOCOL_EXCEPTION">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_URL">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_JSON">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_DATE_FORMAT">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_REQUEST">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_RESPONSE">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_UNSUPPORTED_ENCODING">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_ACTION_TOKEN">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_API_KEY_NOT_FOUND">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_REQUIRED_FIELD">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_DATA_TYPE">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_KEY">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_PATH">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_OBJECT_NAME">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_EMAIL">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_PASSWORD">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_ALREADY_REGISTERED_EMAIL">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_USER_LOGIN_ERROR">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_USER_REGISTER_ERROR">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_USER_UPDATE_ERROR">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_LATITUDE">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_INVALID_LONGITUDE">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_PUSH_MESSAGE_EMPTY">
+            <summary>
+            ErrorCode related to push notification
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_PUSH_MESSAGE_LIMIT">
+            <summary>
+            ErrorCode related to push notification
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_PUSH_ERROR">
+            <summary>
+            ErrorCode related to push notification
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraException.ErrorCode.EC_PUSH_DEVICE_NOT_REGISTERED">
+            <summary>
+            ErrorCode related to push notification
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraException.ErrorCode.getValue">
+            <summary>
+            getValue
+            </summary>
+            <returns>Error Code</returns>
+        </member>
+        <member name="T:Netmera.NetmeraGeoLocation">
+            <summary>
+            It is used to create location with the given latitude and longitude values. It is used to set location into the content and then use it on the search queries.
+            </summary>
+            <example>
+            NetmeraGeoLocation location = new NetmeraGeoLocation(41,29);
+            NetmeraContent content = new NetmeraContent("SampleContent");
+            content.add("location",location);
+            content.create();
+            </example>
+        </member>
+        <member name="M:Netmera.NetmeraGeoLocation.#ctor">
+            <summary>
+            Default location where latitude and longitude are 0.0
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraGeoLocation.#ctor(System.Double,System.Double)">
+            <summary>
+            Creates location with the given latitude and longitude.
+            </summary>
+            <param name="lat">Must be between the range of (-90,90)</param>
+            <param name="lng">Must be between the range of (-180,180)</param>
+        </member>
+        <member name="M:Netmera.NetmeraGeoLocation.setLatitude(System.Double)">
+            <summary>
+            Set latitude into the location. latitude must be between the range of (-180.0, 180.0).
+            </summary>
+            <param name="lat">Location's latitude</param>
+        </member>
+        <member name="M:Netmera.NetmeraGeoLocation.getLatitude">
+            <summary>
+            Get latitude.
+            </summary>
+            <returns>The latitude of the given location.</returns>
+        </member>
+        <member name="M:Netmera.NetmeraGeoLocation.setLongitude(System.Double)">
+            <summary>
+            Set longitude into the location. Longitude must be between the range of (-180.0, 180.0).
+            </summary>
+            <param name="lng">Location's longitude</param>
+        </member>
+        <member name="M:Netmera.NetmeraGeoLocation.getLongitude">
+            <summary>
+            Get longitude.
+            </summary>
+            <returns>The longitude of the given location.</returns>
+        </member>
+        <member name="T:Netmera.NetmeraMedia">
+            <summary>
+            It is used to create media content. 
+            Its constructor is used to create different types of media content.
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraMedia.data">
+            <summary>
+             byte array that holds image data
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraMedia.url">
+            <summary>
+            Path of the media
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraMedia.#ctor(System.Byte[])">
+            <summary>
+            Constructor that takes byte array as a parameter and creates <see cref="T:Netmera.NetmeraMedia"/> object
+            </summary>
+            <param name="data">The image's data as byte array</param>
+        </member>
+        <member name="M:Netmera.NetmeraMedia.getData">
+            <summary>
+            Returns the image data as byte array.
+            </summary>
+            <returns>Returns the image data as byte array.</returns>
+        </member>
+        <member name="M:Netmera.NetmeraMedia.getUrl(Netmera.NetmeraMedia.PhotoSize)">
+            <summary>
+            Returns the URL of file with the given size.
+            </summary>
+            <param name="size"> <seealso cref="T:Netmera.NetmeraMedia.PhotoSize"/> object</param>
+            <returns>URL of the photo with the given size</returns>
+        </member>
+        <member name="T:Netmera.NetmeraMedia.PhotoSize">
+            <summary>
+             Type of the photo size.
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraMedia.PhotoSize.DEFAULT">
+            <summary>
+            This is the original image size.If no photo size is setted then original size is used.
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraMedia.PhotoSize.THUMBNAIL">
+            <summary>
+            Image size is defined as 41x41
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraMedia.PhotoSize.SMALL">
+            <summary>
+            Image size is defined as 82x82 px
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraMedia.PhotoSize.MEDIUM">
+            <summary>
+            Image size is defined as 180x250 px
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraMedia.PhotoSize.LARGE">
+            <summary>
+            Image size is defined as 300x350 px
+            </summary>
+        </member>
+        <member name="T:Netmera.NetmeraPrivacy">
+            <summary>
+            Netmera privacy type
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraPrivacy.PUBLIC">
+            <summary>
+            Netmera Privacy
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraPrivacy.PRIVATE">
+            <summary>
+            Netmera Privacy
+            </summary>
+        </member>
+        <member name="T:Netmera.NetmeraPush">
+            <summary>
+            It is used to send push notifications to mobile devices.
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraPush.sendNotification">
+            <summary>
+            Sends notification to IOS, Android and Windows Phone devices.
+            </summary>
+            <returns><see cref="T:Netmera.BasePush.PushChannel"/>-<see cref="T:Netmera.NetmeraPushDetail"/> pairs to show the details of sending notification to devices.</returns>
+        </member>
+        <member name="M:Netmera.NetmeraPush.setSendToAndroid(System.Boolean)">
+            <summary>
+            Sets whether the notification will be sent to Android devices or not
+            </summary>
+            <param name="sendToAndroid">Whether the notification will be sent to Android devices or not</param>
+        </member>
+        <member name="M:Netmera.NetmeraPush.setSendToIos(System.Boolean)">
+            <summary>
+            Sets whether the notification will be sent to IOS devices or not
+            </summary>
+            <param name="sendToIos">Whether the notification will be sent to IOS devices or not</param>
+        </member>
+        <member name="M:Netmera.NetmeraPush.setSendToWp(System.Boolean)">
+            <summary>
+            Sets whether the notification will be sent to Windows Phone devices or not
+            </summary>
+            <param name="sendToWp">Whether the notification will be sent to Windows Phone devices or not</param>
+        </member>
+        <member name="T:Netmera.NetmeraPushDetail">
+            <summary>
+            The NetmeraPushDetail class is used to get the detailed information after a push notification is send.
+            After sending notifications; returned map contains NetmeraPushDetails which contains the detailed information for each channel.
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraPushDetail.path">
+             <summary>
+            Path of the PushDetail 
+             </summary>
+        </member>
+        <member name="F:Netmera.NetmeraPushDetail.status">
+            <summary>
+            Status of the Push Notification
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraPushDetail.error">
+            <summary>
+            Error of the Push Notification
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraPushDetail.successful">
+            <summary>
+            Number of successes of the Push Notification 
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraPushDetail.failed">
+            <summary>
+            Number of failures of the Push Notification
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraPushDetail.message">
+            <summary>
+            Message of the Push Notification
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraPushDetail.getPath">
+            <summary>
+            getPath
+            </summary>
+            <returns>Path of the PushDetail </returns>
+        </member>
+        <member name="M:Netmera.NetmeraPushDetail.getStatus">
+            <summary>
+            getStatus
+            </summary>
+            <returns>Status of the Push Notification</returns>
+        </member>
+        <member name="M:Netmera.NetmeraPushDetail.getError">
+            <summary>
+            getError
+            </summary>
+            <returns>Error of the Push Notification</returns>
+        </member>
+        <member name="M:Netmera.NetmeraPushDetail.getSuccessful">
+            <summary>
+            getSuccessful
+            </summary>
+            <returns>Number of successes of the Push Notification </returns>
+        </member>
+        <member name="M:Netmera.NetmeraPushDetail.getFailed">
+            <summary>
+            getFailed
+            </summary>
+            <returns>Number of failures of the Push Notification</returns>
+        </member>
+        <member name="M:Netmera.NetmeraPushDetail.getMessage">
+            <summary>
+            getMessage
+            </summary>
+            <returns>Message of the Push Notification</returns>
+        </member>
+        <member name="T:Netmera.NetmeraService">
+            <copyright>Copyright 2012 Inomera Research</copyright>
+            <summary>
+            It is used to get <see cref="T:Netmera.NetmeraContent"/> object by its search() and get() methods. Many query options defined to help finding exact object.
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraService.objectName">
+            <summary>
+            Name of the content
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraService.queries">
+            <summary>
+            List to add queries for the search
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraService.conditionalMap">
+            <summary>
+            Is used for the conditional/range queries
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraService.searchText">
+            <summary>
+            Text to search
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraService.max">
+            <summary>
+            Maximum number of the content to return
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraService.page">
+            <summary>
+            Number of the pages
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraService.path">
+            <summary>
+            Path of the content
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraService.sortBy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraService.sortOrder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraService.#ctor(System.String)">
+            <summary>
+            Default constructor for the NetmeraService that sets objectName and other default parameters.
+            Default value for the max = 10 and page = 0. It returns 10 result in each page. It skips page * max in each iteration.
+            </summary>
+            <param name="objectName">Name of the content</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.setMax(System.Int32)">
+            <summary>
+            Sets the total number of results to return. If it is less than or equal to 0 then it is setted to 10.
+            </summary>
+            <param name="max">Maximum content size</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.setPage(System.Int32)">
+            <summary>
+            Sets the total number of pages. If it is less than 0 then it is setted to 0.
+            </summary>
+            <param name="page">Page number</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.getPath">
+            <summary>
+            Returns the path of the content.
+            </summary>
+            <returns>Returns the path of the content</returns>
+        </member>
+        <member name="M:Netmera.NetmeraService.setSortBy(System.String)">
+            <summary>
+            Sorts the content with the given key.
+            </summary>
+            <param name="sortBy">Key to sort content</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.setSortOrder(Netmera.NetmeraService.SortOrder)">
+            <summary>
+            Sorts the content with the given order. If not setted then by default it is sorted by ascending order.
+            </summary>
+            <param name="sortOrder">Order of the sort</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.count">
+            <summary>
+            Finds the number of <seealso cref="T:Netmera.NetmeraContent"/> objects that matches with the query.
+            </summary>
+            <returns>Content count</returns>
+        </member>
+        <member name="M:Netmera.NetmeraService.addSearchText(System.String)">
+            <summary>
+            Adds the searchText into the query.
+            </summary>
+            <param name="searchText">Text to search</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.whereEqual(System.String,System.Object)">
+            <summary>
+            Adds an options to the query where value that matches with the query is equal to the given value.
+            </summary>
+            <param name="key">Key to identify specified value</param>
+            <param name="value">Value associates with the specified key</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.whereGreaterThan(System.String,System.Object)">
+            <summary>
+            Adds an options to the query where value that matches with the query is greater than the given value.
+            </summary>
+            <param name="key">Key to identify specified value</param>
+            <param name="value">Value associates with the specified key</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.whereLessThan(System.String,System.Object)">
+            <summary>
+            Adds an options to the query where value that matches with the query is less than the given value.
+            </summary>
+            <param name="key">Key to identify specified value</param>
+            <param name="value">Value associates with the specified key</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.whereNotEqual(System.String,System.Object)">
+            <summary>
+            Adds an options to the query where value that matches with the query is not equal to the given value.
+            </summary>
+            <param name="key">Key to identify specified value</param>
+            <param name="value">Value associates with the specified key</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.whereGreaterThanOrEqual(System.String,System.Object)">
+            <summary>
+            Adds an options to the query where value that matches with the query is greater than or equal to the given value.
+            </summary>
+            <param name="key">Key to identify specified value</param>
+            <param name="value">Value associates with the specified key</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.whereLessThanOrEqual(System.String,System.Object)">
+            <summary>
+            Adds an options to the query where value that matches with the query is less than or equal to the given value.
+            </summary>
+            <param name="key">Key to identify specified value</param>
+            <param name="value">Value associates with the specified key</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.whereExists(System.String,System.Boolean)">
+            <summary>
+            Adds an options to the query where the given key is exists or not. If value is true then it checks whether key exists, if value is false then it checks whether key not exists.
+            </summary>
+            <param name="key">Key to identify specified value</param>
+            <param name="value">Boolean value to check whether key exists or not</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.whereMatches(System.String,System.String)">
+            <summary>
+            Adds an options to the query where value that returns from the query matches with the given regex.
+            </summary>
+            <param name="key">Key to identify specified value</param>
+            <param name="regex">Value associates with the specified key</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.whereStartsWith(System.String,System.String)">
+            <summary>
+            Adds an options to the query where value that matches with the query starts with the given prefix.
+            </summary>
+            <param name="key">Key to identify specified value</param>
+            <param name="prefix">Value associates with the specified key</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.whereEndsWith(System.String,System.String)">
+            <summary>
+            Adds an options to the query where value that matches with the query ends with the given suffix.
+            </summary>
+            <param name="key">Key to identify specified value</param>
+            <param name="suffix">Value associates with the specified key</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.whereContainedIn``1(System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            Adds an options to the query where value that matches with the query contains any of the values in the given collection.
+            </summary>
+            <param name="key">Key to identify specified value</param>
+            <param name="values">Value associates with the specified key</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.whereAllContainedIn``1(System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            Adds an options to the query where value that matches with the query contains all of the values in the given collection.
+            </summary>
+            <param name="key">Key to identify specified value</param>
+            <param name="values">Value associates with the specified key</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.whereOwnerEqual(Netmera.NetmeraUser)">
+            <summary>
+            Adds an options to the query where value that matches with the given owner
+            </summary>
+            <param name="user">User to be queried</param>
+        </member>
+        <member name="M:Netmera.NetmeraService.search">
+            <summary>
+            Retrieves the list of <seealso cref="T:Netmera.NetmeraContent"/> objects that matches with the query.
+            </summary>
+            <returns>List of the <seealso cref="T:Netmera.NetmeraContent"/> object</returns>
+        </member>
+        <member name="M:Netmera.NetmeraService.boxSearch(Netmera.NetmeraGeoLocation,Netmera.NetmeraGeoLocation,System.String)">
+            <summary>
+            Creates box using the given two location (latitude,longitude) data and searches inside that box.
+            </summary>
+            <param name="firstPoint"><see cref="T:Netmera.NetmeraGeoLocation"/>  object</param>
+            <param name="secondPoint"><see cref="T:Netmera.NetmeraGeoLocation"/>  object</param>
+            <param name="locationSearchField">Name of the field that holds location data.</param>
+            <returns>The list of <see cref="T:Netmera.NetmeraContent"/>  object.</returns>
+        </member>
+        <member name="M:Netmera.NetmeraService.circleSearch(Netmera.NetmeraGeoLocation,System.Double,System.String)">
+            <summary>
+            Searches the content by taking given location as a base and retrieves the contents that located given distance far away.
+            </summary>
+            <param name="startLocation">Base location to search near it.</param>
+            <param name="distance">Distance used to create circle by taking the startLocation as a center.</param>
+            <param name="locationSearchField">Name of the field that holds location data.</param>
+            <returns>The list of <see cref="T:Netmera.NetmeraContent"/>  object.</returns>
+        </member>
+        <member name="M:Netmera.NetmeraService.searchUser">
+            <summary>
+            Retrieves the list of <see cref="T:Netmera.NetmeraUser"/> objects that matches with the
+            query.
+            </summary>
+            <returns>The list of <see cref="T:Netmera.NetmeraUser"/> object</returns>
+        </member>
+        <member name="M:Netmera.NetmeraService.getNetmeraUserService">
+            <summary>
+            Creates <see cref="T:Netmera.NetmeraUser"/> service object. It is used to search users.
+            </summary>
+            <returns><see cref="T:Netmera.NetmeraService"/> object</returns>
+        </member>
+        <member name="M:Netmera.NetmeraService.get(System.String)">
+            <summary>
+            Gets the unique <see cref="T:Netmera.NetmeraContent"/> in a given path.
+            </summary>
+            <param name="path">Content path</param>
+            <returns><see cref="T:Netmera.NetmeraContent"/> in the path</returns>
+        </member>
+        <member name="M:Netmera.NetmeraService.getFromNetwork(System.String)">
+            <summary>
+            Gets the NetmeraContent from the network, not the cache.
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Netmera.NetmeraService.convertJsonArrayToNetmeraContent(Newtonsoft.Json.Linq.JArray)">
+            <summary>
+            
+            </summary>
+            <param name="jsonArray"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Netmera.NetmeraService.convertJsonArrayToNetmeraUser(Newtonsoft.Json.Linq.JArray)">
+            <summary>
+            
+            </summary>
+            <param name="jsonArray"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Netmera.NetmeraService.getNumberOfTotalResults(Newtonsoft.Json.Linq.JArray)">
+            <summary>
+            Finds the numnber of content according to the result responded by the server using count() method
+            </summary>
+            <param name="jsonArray">result responded by the server</param>
+            <returns>Number of returned contents</returns>
+        </member>
+        <member name="M:Netmera.NetmeraService.getUserCustomCondition">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Netmera.NetmeraService.getCustomCondition">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Netmera.NetmeraService.SortOrder">
+            <summary>
+            Content sort order values
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraService.SortOrder.ascending">
+            <summary>
+            Ascending sort order value
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraService.SortOrder.descending">
+            <summary>
+            Descending sort order value
+            </summary>
+        </member>
+        <member name="T:Netmera.NetmeraService.SortBy">
+            <summary>
+            Static class contatining sort-by constants
+            </summary>
+        </member>
+        <member name="F:Netmera.NetmeraService.SortBy.NEARBY">
+            <summary>
+            Constant to be used to sort contents by location
+            </summary>
+        </member>
+        <member name="T:Netmera.NetmeraUser">
+            <summary>
+            It is for managing users of the application. You can
+            register, update, login users with this class.
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraUser.#ctor">
+            <summary>
+            Default constructor to create user object.
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraUser.getEmail">
+            <summary>
+            Returns the email of the user
+            </summary>
+            <returns>Email of the user</returns>
+        </member>
+        <member name="M:Netmera.NetmeraUser.setEmail(System.String)">
+            <summary>
+            Sets the email of the user
+            </summary>
+            <param name="email">Email of the user</param>
+        </member>
+        <member name="M:Netmera.NetmeraUser.setPassword(System.String)">
+            <summary>
+            Sets the password of the user
+            </summary>
+            <param name="password">Password of the user</param>
+        </member>
+        <member name="M:Netmera.NetmeraUser.getNickname">
+            <summary>
+            Returns the nickname of the user
+            </summary>
+            <returns>nNickname of the user</returns>
+        </member>
+        <member name="M:Netmera.NetmeraUser.setNickname(System.String)">
+            <summary>
+            Sets the nickname of the user
+            </summary>
+            <param name="nickname">Nickname of the user</param>
+        </member>
+        <member name="M:Netmera.NetmeraUser.getName">
+            <summary>
+            Returns the name of the user
+            </summary>
+            <returns>name of the user</returns>
+        </member>
+        <member name="M:Netmera.NetmeraUser.setName(System.String)">
+            <summary>
+            Sets the name of the user
+            </summary>
+            <param name="name">Name of the user</param>
+        </member>
+        <member name="M:Netmera.NetmeraUser.getSurname">
+            <summary>
+            Returns the surname of the user
+            </summary>
+            <returns>Surname of the user</returns>
+        </member>
+        <member name="M:Netmera.NetmeraUser.setSurname(System.String)">
+            <summary>
+            Sets the surname of the user
+            </summary>
+            <param name="surname">Surname of the user</param>
+        </member>
+        <member name="M:Netmera.NetmeraUser.getCurrentUser">
+            <summary>
+            Gets the currently logged user
+            </summary>
+            <returns>Currently logged user</returns>
+        </member>
+        <member name="M:Netmera.NetmeraUser.register">
+            <summary>
+            Registers new user. Before calling this method email,password and	
+            nickname fields of the <see cref="T:Netmera.NetmeraUser"/> should be set. Those are
+            the compulsory fields. There are also optional name and surname fields.
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraUser.update">
+            <summary>
+            Updates user info. Before calling this method email,password and nickname
+            fields of the <see cref="T:Netmera.NetmeraUser"/> should be set. Those are the
+            compulsory fields.
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraUser.loginAsGuest">
+            <summary>
+            Logs a guest into the application.
+            </summary>
+            <returns>The logged user</returns>
+        </member>
+        <member name="M:Netmera.NetmeraUser.login(System.String,System.String)">
+            <summary>
+            Logs a user into the registered application. Email and password fields of
+            user is used for this operation.
+            </summary>
+            <param name="email">Email of the user</param>
+            <param name="password">Password of the user</param>
+            <returns>The logged user</returns>
+        </member>
+        <member name="M:Netmera.NetmeraUser.logout">
+            <summary>
+            User logged out from the application
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraUser.activateUser(System.String)">
+            <summary>
+            Activates the registered User.
+            </summary>
+            <param name="email">Email of the user</param>
+        </member>
+        <member name="M:Netmera.NetmeraUser.deactivateUser(System.String)">
+            <summary>
+            Deactivates the registered User.
+            </summary>
+            <param name="email">Email of the user</param>
+        </member>
+        <member name="T:Netmera.NetmeraWPPush">
+            <summary>
+            It is used to send push notifications to Windows Phone devices.
+            </summary>
+        </member>
+        <member name="M:Netmera.NetmeraWPPush.sendNotification">
+            <summary>
+            Sends notification to Windows Phone devices.
+            </summary>
+            <returns><see cref="T:Netmera.BasePush.PushChannel"/>-<see cref="T:Netmera.NetmeraPushDetail"/> pairs to show the details of sending notification to devices.</returns>
+        </member>
+        <member name="M:Netmera.RequestItem.getService">
+            <summary>
+            Return the service
+            </summary>
+            <returns>the service</returns>
+        </member>
+        <member name="M:Netmera.RequestItem.setService(System.String)">
+            <summary>
+            Set the service
+            </summary>
+            <param name="service">the service to set</param>
+        </member>
+        <member name="M:Netmera.RequestItem.getAction">
+            <summary>
+            Return the action
+            </summary>
+            <returns>the action</returns>
+        </member>
+        <member name="M:Netmera.RequestItem.setAction(System.String)">
+            <summary>
+            Set the action
+            </summary>
+            <param name="action">the action to set</param>
+        </member>
+        <member name="M:Netmera.RequestItem.getPath">
+            <summary>
+            Return the path
+            </summary>
+            <returns>the path</returns>
+        </member>
+        <member name="M:Netmera.RequestItem.setPath(System.String)">
+            <summary>
+            Set the path
+            </summary>
+            <param name="path">the path to set</param>
+        </member>
+        <member name="M:Netmera.RequestItem.getActionTokenKey">
+            <summary>
+            Return action token key
+            </summary>
+            <returns>the action token key</returns>
+        </member>
+        <member name="M:Netmera.RequestItem.setActionTokenKey(System.String)">
+            <summary>
+            Set the action token key
+            </summary>
+            <param name="actionTokenKey">The action token key to set</param>
+        </member>
+        <member name="M:Netmera.RequestItem.getContentType">
+            <summary>
+            Return content type
+            </summary>
+            <returns>content type</returns>
+        </member>
+        <member name="M:Netmera.RequestItem.setContentType(System.String)">
+            <summary>
+            Set the content type
+            </summary>
+            <param name="contentType">the content type</param>
+        </member>
+        <member name="M:Netmera.RequestItem.getContentData">
+            <summary>
+            Return the content data
+            </summary>
+            <returns>content data</returns>
+        </member>
+        <member name="M:Netmera.RequestItem.setContentData(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Set the content data
+            </summary>
+            <param name="contentData">Content data to set</param>
+        </member>
+        <member name="M:Netmera.RequestItem.getContentPrivacy">
+            <summary>
+            Return content privacy
+            </summary>
+            <returns>the content privacy</returns>
+        </member>
+        <member name="M:Netmera.RequestItem.setContentPrivacy(System.String)">
+            <summary>
+            Set content privacy
+            </summary>
+            <param name="contentPrivacy">the content privacy</param>
+        </member>
+        <member name="M:Netmera.RequestItem.getEmail">
+            <summary>
+            Return email
+            </summary>
+            <returns>email</returns>
+        </member>
+        <member name="M:Netmera.RequestItem.setEmail(System.String)">
+            <summary>
+            Set the email
+            </summary>
+            <param name="email">email</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,120 @@
+﻿<models:BasePage
+    x:Class="HuntersWP.Pages.AdressesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:HuntersWP.Models"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    Style="{StaticResource DefaultPhoneApplicationPage}"
+    mc:Ignorable="d"
+>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="{StaticResource HuntersBackgroundColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="52"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Margin="0,17,0,5">
+            <Grid x:Name="HeaderGrid" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="17*" />
+                    <ColumnDefinition Width="43*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Height="16"></TextBlock>
+                <TextBlock x:Name="SynTextBlock"  Grid.Row="1" Grid.Column ="0" Text="{Binding base.SyncStatusText}" Style="{StaticResource PhoneTextNormalStyle}"  FontFamily="{StaticResource TitleFontFamily}" FontWeight="{StaticResource TitleFontWeight}" Foreground="{StaticResource HuntersHeadingsColor}"></TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column ="1" Text="HUNTERS COLLECT" Style="{StaticResource PhoneTextNormalStyle}" TextAlignment="Left" FontFamily="{StaticResource TitleFontFamily}" FontWeight="{StaticResource TitleFontWeight}" Foreground="{StaticResource HuntersHeadingsColor}"/>
+            </Grid>
+
+
+            <Rectangle Margin="0,4,0,0" Fill="{StaticResource HuntersButtonColor}" Height="3" Width="Auto"/>
+        </StackPanel>
+        <!--ContentPanel - place additional content here-->
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,-10,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <StackPanel>
+                    <!--<StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Name="btnAll" Content="all" Click="BtnAll_OnClick"/>
+                        <Button Name="btnToSurvey" Content="to survey" Click="BtnToSurvey_OnClick"/>
+                            </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Name="btnIncomplete" Content="incomplete" Click="BtnIncomplete_OnClick"/>
+                        <Button Name="btnSurveyed" Content="surveyed" Click="BtnSurveyed_OnClick"/>
+                        </StackPanel>
+                    </StackPanel>-->
+
+
+
+                    <StackPanel Orientation="Horizontal">
+                        <!-- <Button Content="All" Width="100"  Name="btnAll" Click="BtnAll_OnClick"  Background="{StaticResource HuntersButtonColor}" Foreground="{StaticResource HuntersFontColorLight}" BorderThickness="0" FontSize="15"/> -->
+                        <Button Content="Incomplete" Width="150" Height="70" Name="btnIncomplete" Click="BtnIncomplete_OnClick"  Background="{StaticResource HuntersButtonColor}" Foreground="{StaticResource HuntersFontColorLight}" BorderThickness="0" FontSize="20"/>
+                        <Button Content="Surveyed" Width="150"  Height="70" Name="btnSurveyed" Click="BtnSurveyed_OnClick"  Background="{StaticResource HuntersButtonColor}" Foreground="{StaticResource HuntersFontColorLight}" BorderThickness="0" FontSize="20"/>
+                        <Button Content="To survey" Width="150" Height="70" Name="btnToSurvey" Click="BtnToSurvey_OnClick"  Background="{StaticResource HuntersButtonColor}" Foreground="{StaticResource HuntersFontColorLight}" BorderThickness="0" FontSize="20"/>
+                    </StackPanel>
+
+                    <!--<toolkit:ListPicker Name="cmbType" Foreground="{StaticResource HuntersFontColor}">
+                        <toolkit:ListPicker.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <TextBlock Text="{Binding Text}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </toolkit:ListPicker.ItemTemplate>
+                        <toolkit:ListPicker.FullModeItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <TextBlock Text="{Binding Text}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </toolkit:ListPicker.FullModeItemTemplate>
+                    </toolkit:ListPicker>-->
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Search:" FontWeight="Bold"  Margin="12,0,0,0" VerticalAlignment="Center" FontSize="24" RenderTransformOrigin="1.357,0.625" Foreground="{StaticResource HuntersHeadingsColor}"/>
+                        <TextBox x:Name="tbSearch" KeyUp="TbSearch_OnKeyUp" Margin="6,0,0,0" Width="354" BorderThickness="3" BorderBrush="{StaticResource HuntersButtonColor}" />
+                    </StackPanel>
+
+                </StackPanel>
+            </Grid>
+
+            <ListBox Grid.Row="1" x:Name="lstAdresses" SelectionChanged="LstAdresses_OnSelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,12,0,12" FontSize="30" ItemContainerStyle="{StaticResource HuntersListBoxItemStyle}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,0,0,0" >
+                            <TextBlock Text="{Binding AddressLine1}" TextWrapping="Wrap" Visibility="{Binding Complete,Converter={StaticResource OppositeBoolToVisibilityConverter}}"/>
+                            <TextBlock Text="{Binding AddressLine1}" TextWrapping="Wrap" Visibility="{Binding Complete,Converter={StaticResource BoolToVisibilityConverter}}" Foreground="{StaticResource HuntersFontColor}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </Grid>
+    </Grid>
+
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar>
+            <shell:ApplicationBarIconButton Text="address" Click="AddClick" IconUri="/Images/appbar.add.rest.png"/>
+            <shell:ApplicationBarIconButton Text="sync" Click="ApplicationBarIconButton_OnClick" IconUri="/Images/appbar.refresh.rest.png"/>
+        </shell:ApplicationBar>
+
+
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</models:BasePage>

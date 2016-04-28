@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF1D432A-380F-434A-BC43-FC39AC8B61A8}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.WindowsAzure.Storage</RootNamespace>
+    <AssemblyName>Microsoft.WindowsAzure.Storage</AssemblyName>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>
+    </SilverlightVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;WINDOWS_DESKTOP;APM;TASK</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>MSSharedLibKey.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;WINDOWS_DESKTOP;APM;TASK;SIGN</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;DNCP;APM;TASK;WINDOWS_DESKTOP</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;WINDOWS_DESKTOP;APM;TASK</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;DNCP;APM;TASK;WINDOWS_DESKTOP</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;WINDOWS_DESKTOP;APM;TASK</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\Test\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;WINDOWS_DESKTOP;APM;TASK;SIGN</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|x86'">
+    <OutputPath>bin\x86\Test\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;WINDOWS_DESKTOP;APM;TASK</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|ARM'">
+    <OutputPath>bin\ARM\Test\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;WINDOWS_DESKTOP;APM;TASK</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'HuntersV2|AnyCPU'">
+    <OutputPath>bin\HuntersV2\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;WINDOWS_DESKTOP;APM;TASK;SIGN</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'HuntersV2|x86'">
+    <OutputPath>bin\x86\HuntersV2\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;WINDOWS_DESKTOP;APM;TASK</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'HuntersV2|ARM'">
+    <OutputPath>bin\ARM\HuntersV2\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;WINDOWS_DESKTOP;APM;TASK</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AccessCondition.cs" />
+    <Compile Include="AuthenticationScheme.cs" />
+    <Compile Include="Auth\Protocol\IAuthenticationHandler.cs" />
+    <Compile Include="Auth\Protocol\NoOpAuthenticationHandler.cs" />
+    <Compile Include="Auth\Protocol\SharedKeyAuthenticationHandler.cs" />
+    <Compile Include="Auth\Protocol\SharedKeyLiteAuthenticationHandler.cs" />
+    <Compile Include="Auth\StorageAccountKey.cs" />
+    <Compile Include="Auth\StorageCredentials.cs" />
+    <Compile Include="Blob\BlobAttributes.cs" />
+    <Compile Include="Blob\BlobContainerPermissions.cs" />
+    <Compile Include="Blob\BlobContainerProperties.cs" />
+    <Compile Include="Blob\BlobContainerPublicAccessType.cs" />
+    <Compile Include="Blob\BlobContinuationToken.cs" />
+    <Compile Include="Blob\BlobListingDetails.cs" />
+    <Compile Include="Blob\BlobProperties.cs" />
+    <Compile Include="Blob\BlobReadStream.cs" />
+    <Compile Include="Blob\BlobReadStreamBase.cs" />
+    <Compile Include="Blob\BlobRequestOptions.cs" />
+    <Compile Include="Blob\BlobResultSegment.cs" />
+    <Compile Include="Blob\BlobType.cs" />
+    <Compile Include="Blob\BlobWriteStream.cs" />
+    <Compile Include="Blob\BlobWriteStreamBase.cs" />
+    <Compile Include="Blob\BlockListingFilter.cs" />
+    <Compile Include="Blob\BlockSearchMode.cs" />
+    <Compile Include="Blob\CloudBlobClient.Common.cs" />
+    <Compile Include="Blob\CloudBlobClient.cs" />
+    <Compile Include="Blob\CloudBlobContainer.Common.cs" />
+    <Compile Include="Blob\CloudBlobContainer.cs" />
+    <Compile Include="Blob\CloudBlobDirectory.Common.cs" />
+    <Compile Include="Blob\CloudBlobDirectory.cs" />
+    <Compile Include="Blob\CloudBlobSharedImpl.cs" />
+    <Compile Include="Blob\CloudBlobStream.cs" />
+    <Compile Include="Blob\CloudBlockBlob.Common.cs" />
+    <Compile Include="Blob\CloudBlockBlob.cs" />
+    <Compile Include="Blob\CloudPageBlob.Common.cs" />
+    <Compile Include="Blob\CloudPageBlob.cs" />
+    <Compile Include="Blob\ContainerListingDetails.cs" />
+    <Compile Include="Blob\ContainerResultSegment.cs" />
+    <Compile Include="Blob\CopyState.cs" />
+    <Compile Include="Blob\CopyStatus.cs" />
+    <Compile Include="Blob\DeleteSnapshotsOption.cs" />
+    <Compile Include="Blob\ICloudBlob.Common.cs" />
+    <Compile Include="Blob\ICloudBlob.cs" />
+    <Compile Include="Blob\IListBlobItem.cs" />
+    <Compile Include="Blob\LeaseAction.cs" />
+    <Compile Include="Blob\LeaseDuration.cs" />
+    <Compile Include="Blob\LeaseState.cs" />
+    <Compile Include="Blob\LeaseStatus.cs" />
+    <Compile Include="Blob\ListBlockItem.cs" />
+    <Compile Include="Blob\PageRange.cs" />
+    <Compile Include="Blob\Protocol\BlobAccessPolicyResponse.cs" />
+    <Compile Include="Blob\Protocol\BlobContainerEntry.cs" />
+    <Compile Include="Blob\Protocol\BlobErrorCodeStrings.cs" />
+    <Compile Include="Blob\Protocol\BlobHttpResponseParsers.Common.cs" />
+    <Compile Include="Blob\Protocol\BlobHttpResponseParsers.cs" />
+    <Compile Include="Blob\Protocol\BlobHttpWebRequestFactory.cs" />
+    <Compile Include="Blob\Protocol\BlobListingContext.cs" />
+    <Compile Include="Blob\Protocol\BlobRequest.cs" />
+    <Compile Include="Blob\Protocol\ContainerHttpResponseParsers.Common.cs" />
+    <Compile Include="Blob\Protocol\ContainerHttpResponseParsers.cs" />
+    <Compile Include="Blob\Protocol\ContainerHttpWebRequestFactory.cs" />
+    <Compile Include="Blob\Protocol\GetBlockListResponse.cs" />
+    <Compile Include="Blob\Protocol\GetPageRangesResponse.cs" />
+    <Compile Include="Blob\Protocol\IListBlobEntry.cs" />
+    <Compile Include="Blob\Protocol\ListBlobEntry.cs" />
+    <Compile Include="Blob\Protocol\ListBlobPrefixEntry.cs" />
+    <Compile Include="Blob\Protocol\ListBlobsResponse.cs" />
+    <Compile Include="Blob\Protocol\ListContainersResponse.cs" />
+    <Compile Include="Blob\Protocol\PageWrite.cs" />
+    <Compile Include="Blob\Protocol\PutBlockListItem.cs" />
+    <Compile Include="Blob\SequenceNumberAction.cs" />
+    <Compile Include="Blob\SharedAccessBlobPermissions.cs" />
+    <Compile Include="Blob\SharedAccessBlobPolicies.cs" />
+    <Compile Include="Blob\SharedAccessBlobPolicy.cs" />
+    <Compile Include="CloudStorageAccount.cs" />
+    <Compile Include="Core\Auth\ICanonicalizer.cs" />
+    <Compile Include="Core\Auth\SharedAccessSignatureHelper.cs" />
+    <Compile Include="Core\Auth\SharedKeyCanonicalizer.cs" />
+    <Compile Include="Core\Auth\SharedKeyLiteCanonicalizer.cs" />
+    <Compile Include="Core\Auth\SharedKeyLiteTableCanonicalizer.cs" />
+    <Compile Include="Core\Auth\SharedKeyTableCanonicalizer.cs" />
+    <Compile Include="Core\CanonicalizedString.cs" />
+    <Compile Include="Core\Executor\ExecutionState.cs" />
+    <Compile Include="Core\Executor\Executor.cs" />
+    <Compile Include="Core\Executor\ExecutorBase.cs" />
+    <Compile Include="Core\Executor\ExecutorOperation.cs" />
+    <Compile Include="Core\Executor\RecoveryActions.cs" />
+    <Compile Include="Core\Executor\RESTCommand.cs" />
+    <Compile Include="Core\Executor\StorageCommandBase.cs" />
+    <Compile Include="Core\Executor\TableCommand.cs" />
+    <Compile Include="Core\Executor\TableExecutor.cs" />
+    <Compile Include="Core\Logger.Common.cs" />
+    <Compile Include="Core\Logger.cs" />
+    <Compile Include="Core\MultiBufferMemoryStream.cs" />
+    <Compile Include="Core\NullType.cs" />
+    <Compile Include="Core\SR.cs" />
+    <Compile Include="Core\SyncMemoryStream.cs" />
+    <Compile Include="Core\UriQueryBuilder.cs" />
+    <Compile Include="Core\Util\APMWithTimeout.cs" />
+    <Compile Include="Core\Util\AsyncExtensions.cs" />
+    <Compile Include="Core\Util\AsyncSemaphore.Common.cs" />
+    <Compile Include="Core\Util\AsyncSemaphore.cs" />
+    <Compile Include="Core\Util\AsyncStreamCopier.cs" />
+    <Compile Include="Core\Util\AuthenticationUtility.cs" />
+    <Compile Include="Core\Util\CancellableOperationBase.cs" />
+    <Compile Include="Core\Util\CommonUtility.cs" />
+    <Compile Include="Core\Util\CounterEvent.cs" />
+    <Compile Include="Core\Util\CryptoUtility.cs" />
+    <Compile Include="Core\Util\Exceptions.cs" />
+    <Compile Include="Core\Util\HttpWebUtility.cs" />
+    <Compile Include="Core\Util\MD5Wrapper.cs" />
+    <Compile Include="Core\Util\NativeMD5.cs" />
+    <Compile Include="Core\Util\NativeMethods.cs" />
+    <Compile Include="Core\Util\NavigationHelper.cs" />
+    <Compile Include="Core\Util\PlatformAgnosticReflectionExtensions.cs" />
+    <Compile Include="Core\Util\StorageAsyncResult.cs" />
+    <Compile Include="Core\Util\StorageCommandAsyncResult.cs" />
+    <Compile Include="Core\Util\StreamDescriptor.cs" />
+    <Compile Include="Core\Util\StreamExtensions.cs" />
+    <Compile Include="DoesServiceRequest.cs" />
+    <Compile Include="IBufferManager.cs" />
+    <Compile Include="ICancellableAsyncResult.cs" />
+    <Compile Include="IContinuationToken.cs" />
+    <Compile Include="IRequestOptions.cs" />
+    <Compile Include="LogLevel.cs" />
+    <Compile Include="OperationContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queue\CloudQueue.Common.cs" />
+    <Compile Include="Queue\CloudQueue.cs" />
+    <Compile Include="Queue\CloudQueueClient.Common.cs" />
+    <Compile Include="Queue\CloudQueueClient.cs" />
+    <Compile Include="Queue\CloudQueueMessage.Common.cs" />
+    <Compile Include="Queue\CloudQueueMessage.cs" />
+    <Compile Include="Queue\MessageUpdateFields.cs" />
+    <Compile Include="Queue\Protocol\GetMessagesResponse.cs" />
+    <Compile Include="Queue\Protocol\ListQueuesResponse.cs" />
+    <Compile Include="Queue\Protocol\QueueAccessPolicyResponse.cs" />
+    <Compile Include="Queue\Protocol\QueueContinuationToken.cs" />
+    <Compile Include="Queue\Protocol\QueueEntry.cs" />
+    <Compile Include="Queue\Protocol\QueueErrorCodeStrings.cs" />
+    <Compile Include="Queue\Protocol\QueueHttpResponseParsers.Common.cs" />
+    <Compile Include="Queue\Protocol\QueueHttpResponseParsers.cs" />
+    <Compile Include="Queue\Protocol\QueueHttpWebRequestFactory.cs" />
+    <Compile Include="Queue\Protocol\QueueListingContext.cs" />
+    <Compile Include="Queue\Protocol\QueueListingDetails.cs" />
+    <Compile Include="Queue\Protocol\QueueMessage.cs" />
+    <Compile Include="Queue\Protocol\QueuePermissions.cs" />
+    <Compile Include="Queue\Protocol\QueueRequest.cs" />
+    <Compile Include="Queue\QueueMessageType.cs" />
+    <Compile Include="Queue\QueueRequestOptions.cs" />
+    <Compile Include="Queue\QueueResultSegment.cs" />
+    <Compile Include="Queue\SharedAccessQueuePermissions.cs" />
+    <Compile Include="Queue\SharedAccessQueuePolicies.cs" />
+    <Compile Include="Queue\SharedAccessQueuePolicy.cs" />
+    <Compile Include="RequestEventArgs.cs" />
+    <Compile Include="RequestResult.cs" />
+    <Compile Include="ResultSegment.cs" />
+    <Compile Include="RetryPolicies\ExponentialRetry.cs" />
+    <Compile Include="RetryPolicies\IRetryPolicy.cs" />
+    <Compile Include="RetryPolicies\LinearRetry.cs" />
+    <Compile Include="RetryPolicies\NoRetry.cs" />
+    <Compile Include="Shared\Protocol\AccessPolicyResponseBase.cs" />
+    <Compile Include="Shared\Protocol\Constants.cs" />
+    <Compile Include="Shared\Protocol\HttpResponseHeader.cs" />
+    <Compile Include="Shared\Protocol\HttpResponseParsers.Common.cs" />
+    <Compile Include="Shared\Protocol\HttpResponseParsers.cs" />
+    <Compile Include="Shared\Protocol\HttpWebRequestFactory.cs" />
+    <Compile Include="Shared\Protocol\ListingContext.cs" />
+    <Compile Include="Shared\Protocol\LoggingOperations.cs" />
+    <Compile Include="Shared\Protocol\LoggingProperties.cs" />
+    <Compile Include="Shared\Protocol\MetricsLevel.cs" />
+    <Compile Include="Shared\Protocol\MetricsProperties.cs" />
+    <Compile Include="Shared\Protocol\Request.cs" />
+    <Compile Include="Shared\Protocol\Response.cs" />
+    <Compile Include="Shared\Protocol\ResponseParsingBase.cs" />
+    <Compile Include="Shared\Protocol\ServiceProperties.cs" />
+    <Compile Include="Shared\Protocol\StorageErrorCodeStrings.cs" />
+    <Compile Include="Shared\Protocol\WebHeaderCollectionExtensions.cs" />
+    <Compile Include="Shared\Protocol\WebRequestExtensions.cs" />
+    <Compile Include="Shared\Protocol\WebRequestMethods.cs" />
+    <Compile Include="StorageException.cs" />
+    <Compile Include="StorageExtendedErrorInformation.cs" />
+    <Compile Include="Table\CloudTable.Common.cs" />
+    <Compile Include="Table\CloudTable.cs" />
+    <Compile Include="Table\CloudTableClient.Common.cs" />
+    <Compile Include="Table\CloudTableClient.cs" />
+    <Compile Include="Table\DynamicTableEntity.cs" />
+    <Compile Include="Table\EdmType.cs" />
+    <Compile Include="Table\EntityProperty.cs" />
+    <Compile Include="Table\EntityReadFlags.cs" />
+    <Compile Include="Table\EntityResolver.cs" />
+    <Compile Include="Table\EntityUtilities.cs" />
+    <Compile Include="Table\IgnorePropertyAttribute.cs" />
+    <Compile Include="Table\ITableEntity.cs" />
+    <Compile Include="Table\Protocol\HttpResponseAdapterMessage.cs" />
+    <Compile Include="Table\Protocol\HttpWebRequestAdapterMessage.cs" />
+    <Compile Include="Table\Protocol\TableAccessPolicyResponse.cs" />
+    <Compile Include="Table\Protocol\TableConstants.cs" />
+    <Compile Include="Table\Protocol\TableErrorCodeStrings.cs" />
+    <Compile Include="Table\Protocol\TableHttpWebRequestFactory.cs" />
+    <Compile Include="Table\Protocol\TableHttpWebResponseParsers.cs" />
+    <Compile Include="Table\Protocol\TableOperationHttpRequestFactory.cs" />
+    <Compile Include="Table\Protocol\TableOperationHttpResponseParsers.cs" />
+    <Compile Include="Table\Protocol\TableRequest.cs" />
+    <Compile Include="Table\Protocol\TableUtilities.cs" />
+    <Compile Include="Table\Queryable\ALinqExpressionVisitor.cs" />
+    <Compile Include="Table\Queryable\ClientConvert.cs" />
+    <Compile Include="Table\Queryable\Common.cs" />
+    <Compile Include="Table\Queryable\DataServiceExpressionVisitor.cs" />
+    <Compile Include="Table\Queryable\EntityResolverQueryOptionExpression.cs" />
+    <Compile Include="Table\Queryable\Evaluator.cs" />
+    <Compile Include="Table\Queryable\ExpressionNormalizer.cs" />
+    <Compile Include="Table\Queryable\ExpressionParser.cs" />
+    <Compile Include="Table\Queryable\ExpressionWriter.cs" />
+    <Compile Include="Table\Queryable\FilterQueryOptionExpression.cs" />
+    <Compile Include="Table\Queryable\InputBinder.cs" />
+    <Compile Include="Table\Queryable\InputReferenceExpression.cs" />
+    <Compile Include="Table\Queryable\MemberAssignmentAnalysis.cs" />
+    <Compile Include="Table\Queryable\NavigationPropertySingletonExpression.cs" />
+    <Compile Include="Table\Queryable\OperationContextQueryOptionExpression.cs" />
+    <Compile Include="Table\Queryable\PathBox.cs" />
+    <Compile Include="Table\Queryable\ProjectionAnalyzer.cs" />
+    <Compile Include="Table\Queryable\ProjectionQueryOptionExpression.cs" />
+    <Compile Include="Table\Queryable\ProjectionRewriter.cs" />
+    <Compile Include="Table\Queryable\QueryOptionExpression.cs" />
+    <Compile Include="Table\Queryable\ReferenceEqualityComparer.cs" />
+    <Compile Include="Table\Queryable\ReflectionUtil.cs" />
+    <Compile Include="Table\Queryable\RequestOptionsQueryOptionExpression.cs" />
+    <Compile Include="Table\Queryable\ResourceBinder.cs" />
+    <Compile Include="Table\Queryable\ResourceExpression.cs" />
+    <Compile Include="Table\Queryable\ResourceExpressionType.cs" />
+    <Compile Include="Table\Queryable\ResourceSetExpression.cs" />
+    <Compile Include="Table\Queryable\TableQueryableExtensions.cs" />
+    <Compile Include="Table\Queryable\TakeQueryOptionExpression.cs" />
+    <Compile Include="Table\Queryable\TypeSystem.cs" />
+    <Compile Include="Table\Queryable\UriHelper.cs" />
+    <Compile Include="Table\Queryable\WebConvert.cs" />
+    <Compile Include="Table\Queryable\XmlConstants.cs" />
+    <Compile Include="Table\QueryComparisons.cs" />
+    <Compile Include="Table\SharedAccessTablePermissions.cs" />
+    <Compile Include="Table\SharedAccessTablePolicies.cs" />
+    <Compile Include="Table\SharedAccessTablePolicy.cs" />
+    <Compile Include="Table\TableBatchOperation.Common.cs" />
+    <Compile Include="Table\TableBatchOperation.cs" />
+    <Compile Include="Table\TableContinuationToken.cs" />
+    <Compile Include="Table\TableEntity.cs" />
+    <Compile Include="Table\TableOperation.Common.cs" />
+    <Compile Include="Table\TableOperation.cs" />
+    <Compile Include="Table\TableOperationType.cs" />
+    <Compile Include="Table\TableOperators.cs" />
+    <Compile Include="Table\TablePermissions.cs" />
+    <Compile Include="Table\TableQuery.Common.cs" />
+    <Compile Include="Table\TableQuery.cs" />
+    <Compile Include="Table\TableQueryGeneric.Common.cs" />
+    <Compile Include="Table\TableQueryNonGeneric.cs" />
+    <Compile Include="Table\TableQueryProvider.cs" />
+    <Compile Include="Table\TableQuerySegment.cs" />
+    <Compile Include="Table\TableRequestOptions.cs" />
+    <Compile Include="Table\TableResult.cs" />
+    <Compile Include="Table\TableResultSegment.cs" />
+    <Compile Include="Table\TableServiceTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\DotNetCommon\*.cs" />
+    <Compile Include="..\DotNetCommon\Auth\*.cs">
+      <Link>Auth\Auth</Link>
+    </Compile>
+    <Compile Include="..\DotNetCommon\Auth\Protocol\*.cs">
+      <Link>Auth\Protocol\Protocol</Link>
+    </Compile>
+    <Compile Include="..\DotNetCommon\Blob\*.cs">
+      <Link>Blob\Blob</Link>
+    </Compile>
+    <Compile Include="..\DotNetCommon\Blob\Protocol\*.cs">
+      <Link>Blob\Protocol\Protocol</Link>
+    </Compile>
+    <Compile Include="..\DotNetCommon\Queue\*.cs">
+      <Link>Queue\Queue</Link>
+    </Compile>
+    <Compile Include="..\DotNetCommon\Queue\Protocol\*.cs">
+      <Link>Queue\Protocol\Protocol</Link>
+    </Compile>
+    <Compile Include="..\DotNetCommon\Table\*.cs">
+      <Link>Table\Tables</Link>
+    </Compile>
+    <Compile Include="..\DotNetCommon\Table\Protocol\*.cs">
+      <Link>Table\Protocol\Protocol</Link>
+    </Compile>
+    <Compile Include="..\DotNetCommon\Shared\Protocol\*.cs">
+      <Link>Shared\Protocol\Protocol</Link>
+    </Compile>
+    <Compile Include="..\DotNetCommon\Core\*.cs">
+      <Link>Core\Core</Link>
+    </Compile>
+    <Compile Include="..\DotNetCommon\Core\Auth\*.cs">
+      <Link>Core\Auth\Auth</Link>
+    </Compile>
+    <Compile Include="..\DotNetCommon\Core\Util\*.cs">
+      <Link>Core\Util\Util</Link>
+    </Compile>
+    <Compile Include="..\DotNetCommon\Core\Executor\*.cs">
+      <Link>Core\Executor\Executor</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Root -->
+    <Compile Include="..\Common\*.cs" />
+    <!-- Auth -->
+    <Compile Include="..\Common\Auth\*.cs">
+      <Link>Auth\Auth</Link>
+    </Compile>
+    <!-- Core -->
+    <Compile Include="..\Common\Core\*.cs">
+      <Link>Core\Core</Link>
+    </Compile>
+    <Compile Include="..\Common\Core\Auth\*.cs">
+      <Link>Core\Auth\Auth</Link>
+    </Compile>
+    <Compile Include="..\Common\Core\Executor\*.cs">
+      <Link>Core\Executor\Executor</Link>
+    </Compile>
+    <Compile Include="..\Common\Core\Util\*.cs">
+      <Link>Core\Util\Util</Link>
+    </Compile>
+    <!-- Services-->
+    <Compile Include="..\Common\RetryPolicies\*.cs">
+      <Link>RetryPolicies\RetryPolicies</Link>
+    </Compile>
+    <Compile Include="..\Common\Blob\*.cs">
+      <Link>Blob\Blob</Link>
+    </Compile>
+    <Compile Include="..\Common\Blob\Protocol\*.cs">
+      <Link>Blob\Protocol\Protocol</Link>
+    </Compile>
+    <Compile Include="..\Common\Queue\*.cs">
+      <Link>Queue\Queue</Link>
+    </Compile>
+    <Compile Include="..\Common\Queue\Protocol\*.cs">
+      <Link>Queue\Protocol\Protocol</Link>
+    </Compile>
+    <Compile Include="..\Common\Table\Queryable\*.cs">
+      <Link>Table\Queryable\Queryable</Link>
+    </Compile>
+    <Compile Include="..\Common\Table\*.cs">
+      <Link>Table\Table</Link>
+    </Compile>
+    <Compile Include="..\Common\Table\Protocol\*.cs">
+      <Link>Table\Protocol\Protocol</Link>
+    </Compile>
+    <Compile Include="..\Common\Shared\*.cs">
+      <Link>Shared\Shared</Link>
+    </Compile>
+    <Compile Include="..\Common\Shared\Protocol\*.cs">
+      <Link>Shared\Protocol\Protocol</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MSSharedLibKey.snk" />
+    <None Include="Settings.StyleCop" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Edm.Portable, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData.Portable, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial.Portable, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.Portable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,9 @@
+c:\Development\Storage\Hunters\HuntersWP\TestConsoleApplication\bin\Debug\7.jpg
+c:\Development\Storage\Hunters\HuntersWP\TestConsoleApplication\bin\Debug\TestConsoleApplication.exe.config
+c:\Development\Storage\Hunters\HuntersWP\TestConsoleApplication\bin\Debug\TestConsoleApplication.exe
+c:\Development\Storage\Hunters\HuntersWP\TestConsoleApplication\bin\Debug\TestConsoleApplication.pdb
+c:\Development\Storage\Hunters\HuntersWP\TestConsoleApplication\bin\Debug\itextsharp.dll
+c:\Development\Storage\Hunters\HuntersWP\TestConsoleApplication\bin\Debug\itextsharp.xml
+c:\Development\Storage\Hunters\HuntersWP\TestConsoleApplication\obj\Debug\TestConsoleApplication.csprojResolveAssemblyReference.cache
+c:\Development\Storage\Hunters\HuntersWP\TestConsoleApplication\obj\Debug\TestConsoleApplication.exe
+c:\Development\Storage\Hunters\HuntersWP\TestConsoleApplication\obj\Debug\TestConsoleApplication.pdb

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HuntersWP.Models.Surveyor" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAEAAAAAAAAAAAgAAAAAAAAAAAQAAAQAAAAAAAAg=</HashCode>
+      <FileName>Models\Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HuntersWP.Models.Address" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEAGBBAAQAAAAQqQgCAAACgIABAAAQAAAQAAgQAQohQ=</HashCode>
+      <FileName>Models\Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HuntersWP.Models.Question" Collapsed="true">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIACADACAACCAAgJAAACQggCCAIAQAAAAAAAAAACAA=</HashCode>
+      <FileName>Models\Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HuntersWP.Models.Option" Collapsed="true">
+    <Position X="3.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEICAAAgAIAAAAAAAgABAAAAAAAAAQABAAAAiAAAAAA=</HashCode>
+      <FileName>Models\Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HuntersWP.Models.RichMedia" Collapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEICAAAAAAAAAAAAgQAAAAAAAAAAAQAAAAAAAABAIAA=</HashCode>
+      <FileName>Models\Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HuntersWP.Models.Survelem" Collapsed="true">
+    <Position X="3.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEICAAAAEAAAAAAAgQgAAAAAAAAAAQAAIODgHwAAIgA=</HashCode>
+      <FileName>Models\Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HuntersWP.Models.SurveyTypes" Collapsed="true">
+    <Position X="6.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAAAIAAAAAAAAAAQAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HuntersWP.Models.SurvelemMap" Collapsed="true">
+    <Position X="3.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEICAAAQCAAAAAAAAAAAAAgAAAAAEQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HuntersWP.Models.SyncError" Collapsed="true">
+    <Position X="6.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAABAAAAIAAAAAA=</HashCode>
+      <FileName>Models\Classes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="HuntersWP.Models.ESyncStatus" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAwAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Classes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

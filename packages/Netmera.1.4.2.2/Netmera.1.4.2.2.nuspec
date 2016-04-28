@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Netmera</id>
+    <version>1.4.2.2</version>
+    <title>Netmera</title>
+    <authors>Netmera</authors>
+    <owners>Netmera</owners>
+    <projectUrl>http://www.netmera.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The official Netmera.com .NET and Windows Phone SDK. Add a cloud backend to your apps with this simple to use SDK.</description>
+    <releaseNotes />
+    <copyright>2013</copyright>
+    <language />
+    <tags>Netmera .NET Windows Phone Cloud Backend services</tags>
+  </metadata>
+</package>

@@ -1,0 +1,151 @@
+﻿<models:BasePage
+    x:Class="HuntersWP.Pages.ElementsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:HuntersWP.Models"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    Style="{StaticResource DefaultPhoneApplicationPage}" Name="page"
+
+    mc:Ignorable="d"
+>
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="{StaticResource HuntersBackgroundColor}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="0,17,0,28">
+            <TextBlock Text="HUNTERS COLLECT" Style="{StaticResource PhoneTextNormalStyle}" TextAlignment="Center" FontFamily="{StaticResource TitleFontFamily}" FontWeight="{StaticResource TitleFontWeight}" Foreground="{StaticResource HuntersHeadingsColor}"/>
+            <Rectangle Margin="0,4,0,0" Fill="{StaticResource HuntersButtonColor}" Height="3" Width="Auto"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,-18,12,0">
+
+            <ScrollViewer>
+            
+            <StackPanel>
+                    <Grid x:Name="qRefGrid" Margin="0,0,0,6">
+                        <TextBlock Grid.Column="1" Name="tbQuestionRef" Foreground="{StaticResource HuntersHeadingsColor}"  HorizontalAlignment="Left"/>
+                        <TextBlock Grid.Column="2"  Name="tbImage" Text="Has image" Foreground="{StaticResource HuntersHeadingsColor}" HorizontalAlignment="Right" Visibility="Collapsed"/>
+                    </Grid>
+
+                    <TextBlock Name="tbQuestionHeading"  HorizontalAlignment="Center" FontSize="28" FontWeight="Bold" TextWrapping="Wrap"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Name="tbCurrentQNmber"/>
+                        <TextBlock Text=" / "/>
+                        <TextBlock Name="tbQuestionCount"/>
+                    </StackPanel>
+
+<StackPanel Name="cmb1Panel">
+                    <toolkit:ListPicker Name="cmb1" ExpansionMode="FullScreenOnly" >
+                    <toolkit:ListPicker.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                    <TextBlock Text="{Binding Display}" Foreground="{StaticResource HuntersFontColor}" FontFamily="{StaticResource HuntersNormalFont}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </toolkit:ListPicker.ItemTemplate>
+                        
+                    <toolkit:ListPicker.FullModeItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                    <Border  Height="75" Margin="3,3,3,3"  Background="{StaticResource HuntersButtonColor}">
+                                        <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Margin="5,5,5,5" Text="{Binding Display}" Foreground="{StaticResource HuntersFontColorLight}" FontFamily="{StaticResource HuntersNormalFont}" Width="400"  FontSize="30"/>
+                                    </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </toolkit:ListPicker.FullModeItemTemplate>
+                </toolkit:ListPicker>
+                    </StackPanel>
+
+                <StackPanel Name="tb1ForCmb1Panel" Visibility="Collapsed">
+                    <TextBox Name="tb1ForCmb1"/>
+                </StackPanel>
+
+                <StackPanel Name="panel2" Visibility="Collapsed">
+
+                        <toolkit:ListPicker Name="cmb2" Visibility="Collapsed" ExpansionMode="FullScreenOnly"  >
+                    <toolkit:ListPicker.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                        <TextBlock Text="{Binding Display}" Foreground="{StaticResource HuntersFontColor}" FontFamily="{StaticResource HuntersNormalFont}"/>
+                                      
+                            </Grid>
+                        </DataTemplate>
+                    </toolkit:ListPicker.ItemTemplate>
+                    <toolkit:ListPicker.FullModeItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                        <Border  Height="75" Margin="3,3,3,3"  Background="{StaticResource HuntersButtonColor}">
+                                            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Margin="5,5,5,5" Text="{Binding Display}" Foreground="{StaticResource HuntersFontColorLight}" FontFamily="{StaticResource HuntersNormalFont}" Width="400"  FontSize="30"/>
+                            </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </toolkit:ListPicker.FullModeItemTemplate>
+                </toolkit:ListPicker>
+
+                        <toolkit:WrapPanel Name="panelTextBoxes" ItemWidth="220" Orientation="Horizontal"  Visibility="Collapsed" >
+                    
+                </toolkit:WrapPanel>
+
+
+                        <TextBlock Text="Comment:"  Foreground="{StaticResource HuntersHeadingsColor}" FontFamily="{StaticResource HuntersNormalFont}"  FontWeight="Bold" Margin="12,0,0,-8"/>
+                        <TextBox Name="tbComment" AcceptsReturn="True" Height="100" Visibility="Collapsed" BorderThickness="3" BorderBrush="{StaticResource HuntersButtonColor}"/>
+
+                <TextBlock Name="tbQuestionNum" Visibility="Collapsed"/>
+                    
+                   
+                    
+                </StackPanel>
+
+              
+
+            </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar>
+            <shell:ApplicationBarIconButton Text="previous" Click="PreviousClick" IconUri="/Images/appbar.back.rest.png"/>
+            <!--<shell:ApplicationBarIconButton Text="submit" Click="SubmitClick" IconUri="/Images/check.png"/>-->
+            <shell:ApplicationBarIconButton Text="next" Click="NextClick" IconUri="/Images/appbar.next.rest.png"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="take photo" Click="PhotoClick"/>
+            </shell:ApplicationBar.MenuItems>
+            
+        </shell:ApplicationBar>
+        
+        
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</models:BasePage>
